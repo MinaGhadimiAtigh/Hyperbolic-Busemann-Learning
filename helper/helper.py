@@ -45,6 +45,17 @@ def get_optimizer(optimname, params, learning_rate, momentum, decay):
 ################################################################################
 # Standard dataset loaders.
 ################################################################################
+def load_dataset(dataset_name, basedir, batch_size, kwargs):
+    if dataset_name == 'cifar100':
+        return load_cifar100(basedir, batch_size, kwargs)
+    elif dataset_name == 'cifar10':
+        return load_cifar10(basedir, batch_size, kwargs)
+    elif dataset_name == 'cub':
+        return load_cub(basedir, batch_size, kwargs)
+    else:
+        raise Exception('Selected dataset is not available.')
+
+
 def load_cifar100(basedir, batch_size, kwargs):
     # Input channels normalization.
     mrgb = [0.507, 0.487, 0.441]

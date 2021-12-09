@@ -16,14 +16,14 @@ To learn prototypes with 50 output dimensionality and 100 classes, use the code,
 python prototype_learning.py -d 50 -c 100
 ```
 
+The output will be `prototypes-50d-100c.npy` saved in `prototypes` directory.
+
 ### Main code
 Once the prototypes are ready, it's time to run the main code.
 To run `HBL.py`, the parameters in the argparser should be specified,
 ```shell
 python HBL.py --data_name cifar100 -e 1110 -s 128 -r adam -l 0.0005 -c 0.00005 --mult 0.1 --datadir data/ --resdir runs/output_dir/cifar/ --hpnfile prototypes/prototypes-50d-100c.npy --logdir test --do_decay True --drop1 1000 --drop2 1100 --seed 100
 ```
-
-The output will be `prototypes-50d-100c.npy` saved in `prototypes` directory.
 
 The code and explanation will be updated soon.
 

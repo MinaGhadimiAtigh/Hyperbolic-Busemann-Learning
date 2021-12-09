@@ -25,7 +25,7 @@ To run `HBL.py`, the parameters in the argparser should be specified,
 python HBL.py --data_name cifar100 -e 1110 -s 128 -r adam -l 0.0005 -c 0.00005 --mult 0.1 --datadir data/ --resdir runs/output_dir/cifar/ --hpnfile prototypes/prototypes-50d-100c.npy --logdir test --do_decay True --drop1 1000 --drop2 1100 --seed 100
 ```
 
-The code and explanation will be updated soon.
+Further explanation will be added soon.
 
 ### Citation
 Please consider citing this work using this BibTex entry,
